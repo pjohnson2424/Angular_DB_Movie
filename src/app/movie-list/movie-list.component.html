@@ -1,0 +1,20 @@
+<h1 class="pageTitle"> MOVIES</h1>
+<app-search-criteria (onSearch)="searched($event)" (criteriaSearch)="criteriaSearched($event)"></app-search-criteria>
+<div class = 'navButtons'>
+    <button class="lastPageBtn"(click)="lastPage()">Previous Page</button>
+    <button class="nextPageBtn"(click)="nextPage()">Next Page</button>
+</div>
+<ul class="movie-container">
+<li class="movieCard" *ngFor='let movie of movies; index as i'>
+    <a routerLink="/detail/{{movie.id}}">
+    <h1 class="movieTitle">{{movie.title}}</h1>
+    <h3 class="movieDate">{{movie.release_date | date: 'yyyy'}}</h3>
+    <img class="imageClass"src="{{imagePath}}{{movie.poster_path}}">
+    </a>
+    <button class="addToWatchListBtn" (click)='addToWatch(movies[i])'>Add to Watch List</button>
+</li>
+</ul>
+
+
+
+

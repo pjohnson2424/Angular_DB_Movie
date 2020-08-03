@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    font-family: Dosis, sans-serif;
+    }
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.movie-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: auto;
+    margin: 10px 10px;
+    padding: 20px;
+    font-family: Dosis, sans-serif;
+}
+
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.overview {
+    display: flex;
+    margin: 10px 0;
+
+}
+
+.imageClass{
+    height: 375px;
+    width: 250px; 
+    border-radius: 10px;
+    box-shadow:2px 1px 1px 2px rgba(255, 255, 255, 0.294);
+    border-radius: 10px; 
+}
+
+.addToWatchListBtn, .backToListBtn {
+    display: flex;
+    margin: 5px auto 5px auto;
+    justify-content: center;
+    background-color:rgba(255, 255, 255, 0.294);
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+@media (min-width:600px){
+    .movie-detail{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:row;
+    }  
+}
